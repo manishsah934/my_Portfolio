@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Manish Kumar Sah | Senior Network Engineer</title>
+
+   <!-- Google Fonts -->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet">
+   <!-- Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Tailwind CSS -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- AOS Animation -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <!-- Particles.js -->
+   <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+
+   <style>
+      :root {
+         scroll-behavior: smooth;
+      }
+
+      body {
+         font-family: 'Poppins', sans-serif;
+         background-color: #020617;
+         color: #f8fafc;
+         overflow-x: hidden;
+      }
+
+      .mono {
+         font-family: 'Fira Code', monospace;
+      }
+
+      /* Particles Background Fix */
+      #tsparticles {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         top: 0;
+         left: 0;
+      }
+
+      .glow-border {
+         position: relative;
+         border: 1px solid rgba(34, 211, 238, 0.2);
+         transition: all 0.3s ease;
+      }
+
+      .glow-border:hover {
+         border-color: #22d3ee;
+         box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+      }
+
+      .nav-blur {
+         backdrop-filter: blur(12px);
+         background-color: rgba(2, 6, 23, 0.8);
+      }
+
+      .terminal-header {
+         background: #1e293b;
+         padding: 8px 12px;
+         border-radius: 8px 8px 0 0;
+         display: flex;
+         gap: 6px;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+         width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+         background: #020617;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background: #1e293b;
+         border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+         background: #22d3ee;
+      }
+
+      .gradient-text {
+         background: linear-gradient(90deg, #22d3ee, #60a5fa);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- Particle Background -->
+   <div id="tsparticles"></div>
+
+   <!-- Navigation -->
+   <nav class="fixed w-full z-50 nav-blur border-b border-slate-800">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+         <div class="text-xl font-bold tracking-tighter text-cyan-400 mono">
+            <i class="fas fa-microchip"></i> MANISH_SAH.ops
+         </div>
+         <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+            <a href="#home" class="hover:text-cyan-400 transition">Terminal</a>
+            <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+            <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
+            <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+         </div>
+         <div class="flex items-center gap-4">
+            <a href="mailto:manishsah934@gmail.com" class="text-cyan-400 text-xl hover:scale-110 transition"
+               title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/manish-shah-467560170/" target="_blank"
+               class="text-cyan-400 text-xl hover:scale-110 transition" title="LinkedIn"><i
+                  class="fab fa-linkedin"></i></a>
+            <!-- Download CV Button -->
+            <a href="assets/pdf/MANISH_SAH_CV_NETWORK_ENGINEER.pdf" download
+               class="flex items-center gap-2 border border-cyan-500/50 px-3 py-1.5 rounded-md text-[10px] mono font-bold text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition">
+               <i class="fas fa-download"></i> DOWNLOAD_CV
+            </a>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Hero Section -->
+   <section id="home" class="min-h-screen flex items-center px-6 pt-20">
+      <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+         <div data-aos="fade-right">
+            <div
+               class="inline-block px-3 py-1 rounded-full border border-cyan-500/30 text-cyan-400 text-xs font-bold mb-6 tracking-widest uppercase">
+               Network Infrastructure Specialist
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Manish Kumar <span class="gradient-text">Sah</span></h1>
+            <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-xl">
+               CCNA Certified IT Administrator with a strong background in **Network Design, Configuration, and
+               Troubleshooting** across ISP, Education, and Banking sectors.
+            </p>
+            <div class="flex flex-wrap gap-4">
+               <a href="#contact"
+                  class="bg-cyan-500 text-slate-950 px-8 py-4 rounded-lg font-bold hover:bg-cyan-400 transition flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                  <i class="fas fa-terminal"></i> ESTABLISH_CONNECTION
+               </a>
+               <a href="#experience"
+                  class="border border-slate-700 px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition">
+                  VIEW_LOGS
+               </a>
+            </div>
+         </div>
+
+         <!-- Terminal Content -->
+         <div data-aos="zoom-in" class="relative">
+            <div class="terminal-header">
+               <div class="w-3 h-3 rounded-full bg-red-500"></div>
+               <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+               <div class="w-3 h-3 rounded-full bg-green-500"></div>
+               <span class="text-[10px] text-slate-500 ml-2 mono uppercase tracking-widest">system_summary.sh</span>
+            </div>
+            <div
+               class="bg-slate-900/80 backdrop-blur p-6 rounded-b-lg border border-slate-700 border-t-0 mono text-sm shadow-2xl">
+               <p class="text-green-400">manish@ops:~$ <span class="text-white">fingerprint --user mksah</span></p>
+               <div class="mt-4 space-y-1">
+                  <p class="text-slate-300"><span class="text-cyan-400">Role:</span> Network Engineer</p>
+                  <p class="text-slate-300"><span class="text-cyan-400">Certification:</span> Cisco CCNA Certified</p>
+                  <p class="text-slate-300"><span class="text-cyan-400">Uptime:</span> 7+ Years Experience</p>
+                  <p class="text-slate-300"><span class="text-cyan-400">Status:</span> Detail-Oriented / Problem-Solver
+                  </p>
+                  <p class="text-slate-300"><span class="text-cyan-400">Location:</span> Kathmandu, Nepal</p>
+                  <p class="text-slate-300"><span class="text-cyan-400">Languages:</span> EN, NP, HI</p>
+               </div>
+               <p class="mt-4 text-green-400">manish@ops:~$ <span class="animate-pulse">_</span></p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Skills Section -->
+   <section id="skills" class="py-24 px-6 bg-slate-950/50">
+      <div class="container mx-auto">
+         <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold italic mono uppercase tracking-tighter">Technical_Payload</h2>
+            <div class="w-20 h-1 bg-cyan-500 mx-auto mt-4"></div>
+         </div>
+
+         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Routing & Switching -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up">
+               <i class="fas fa-route text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">Routing & Switching</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  Cisco IOS, Mikrotik, VLANs, Trunking, EIGRP, BGP, RIP, Static Routing, DHCP, NAT/PAT, CDP, LLDP.
+               </p>
+            </div>
+            <!-- Wireless -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up" data-aos-delay="100">
+               <i class="fas fa-wifi text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">Wireless & Infrastructure</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  Cisco Meraki, Ubiquiti, Ruckus, Ruijie, Cambium, Structured Cabling (UTP/Fiber), Rack Setup.
+               </p>
+            </div>
+            <!-- Monitoring -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up" data-aos-delay="200">
+               <i class="fas fa-chart-line text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">Monitoring & Analysis</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  Nagios, Cacti, Zabbix, Wireshark, SNMP, System Log Reviews, SOC Incidents.
+               </p>
+            </div>
+            <!-- OS & Servers -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up">
+               <i class="fas fa-server text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">Systems & Servers</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  Windows Server (AD, DNS, DHCP, GPO), Linux (Ubuntu, CentOS), Squid Proxy, TACACS+.
+               </p>
+            </div>
+            <!-- IT Support -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up" data-aos-delay="100">
+               <i class="fas fa-headset text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">IT Ops & Support</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  ManageEngine ServiceDesk, Microsoft 365, Hardware Troubleshooting, Remote Support (AnyDesk, RDP).
+               </p>
+            </div>
+            <!-- Protocols -->
+            <div class="p-6 bg-slate-900 rounded-xl glow-border" data-aos="fade-up" data-aos-delay="200">
+               <i class="fas fa-network-wired text-cyan-400 text-3xl mb-4"></i>
+               <h3 class="font-bold text-lg mb-4">Cloud & Protocols</h3>
+               <p class="text-xs text-slate-400 leading-relaxed mono">
+                  Office 365, TCP/IP, VPN, SMB, Google Workspace, AWS Basics, Docker (Basics).
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Experience Section -->
+   <section id="experience" class="py-24 px-6">
+      <div class="container mx-auto max-w-5xl">
+         <div class="mb-16">
+            <h2 class="text-3xl font-bold italic mono uppercase tracking-tighter">Professional Experience</h2>
+            <div class="w-20 h-1 bg-cyan-500 mt-4"></div>
+         </div>
+
+         <div class="space-y-12">
+            <!-- SBI Bank -->
+            <div class="relative pl-8 border-l border-slate-800" data-aos="fade-left">
+               <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-[6px] top-2"></div>
+               <div class="flex flex-wrap justify-between items-center mb-2">
+                  <h3 class="text-xl font-bold text-white uppercase">Nepal SBI Bank</h3>
+                  <span class="text-xs font-bold mono text-cyan-400">June 2022 – Present</span>
+               </div>
+               <p class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-widest">Network Engineer | Kathmandu
+               </p>
+               <ul class="text-sm text-slate-400 space-y-2 mono list-inside text-justify">
+                  <li>> Configuration of core Routers, Switches, and Firewalls.</li>
+                  <li>> Monitoring network outages and coordination with ISPs for 100% uptime.</li>
+                  <li>> Investigation of suspicious firewall logs and SOC incident closure.</li>
+                  <li>> Managed the bank's extensive Wi-Fi infrastructure.</li>
+               </ul>
+            </div>
+
+            <!-- Sunway -->
+            <div class="relative pl-8 border-l border-slate-800" data-aos="fade-left">
+               <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6px] top-2"></div>
+               <div class="flex flex-wrap justify-between items-center mb-2">
+                  <h3 class="text-xl font-bold text-white uppercase">Sunway International College</h3>
+                  <span class="text-xs font-bold mono text-slate-500">March 2020 - June 2022</span>
+               </div>
+               <p class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-widest">IT Manager | Kathmandu</p>
+               <ul class="text-sm text-slate-400 space-y-2 mono text-justify">
+                  <li>> Deployment and configuration of campus-wide network devices.</li>
+                  <li>> Infrastructure monitoring and CCTV security management.</li>
+                  <li>> Resolving high-level IT queries for students and faculty.</li>
+               </ul>
+            </div>
+
+            <!-- Vianet -->
+            <div class="relative pl-8 border-l border-slate-800" data-aos="fade-left">
+               <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6px] top-2"></div>
+               <div class="flex flex-wrap justify-between items-center mb-2">
+                  <h3 class="text-xl font-bold text-white uppercase">Vianet Communicated Ltd.</h3>
+                  <span class="text-xs font-bold mono text-slate-500">May 2018 - March 2020</span>
+               </div>
+               <p class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-widest">Sr. Support Executive |
+                  Kathmandu</p>
+               <ul class="text-sm text-slate-400 space-y-2 mono text-justify">
+                  <li>> Corporate client support for hardware, systems, and enterprise networking.</li>
+                  <li>> Troubleshooting L3 Routing and Switching issues.</li>
+                  <li>> Provisioning Wi-Fi Access Points and Controllers for business units.</li>
+               </ul>
+            </div>
+
+            <!-- Classic Tech -->
+            <div class="relative pl-8 border-l border-slate-800" data-aos="fade-left">
+               <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6px] top-2"></div>
+               <div class="flex flex-wrap justify-between items-center mb-2">
+                  <h3 class="text-xl font-bold text-white uppercase">Classic Tech Pvt Ltd</h3>
+                  <span class="text-xs font-bold mono text-slate-500">March 2017 - March 2018</span>
+               </div>
+               <p class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-widest">Associate-L2 Network Operation
+                  |
+                  Kathmandu</p>
+               <ul class="text-sm text-slate-400 space-y-2 mono text-justify">
+                  <li>> Responsible for planning, deploying and troubleshooting network related projects.</li>
+                  <li>> Configure multi-vendor Routers and Switches.</li>
+                  <li>> Network monitoring on Daily Basis and technical support to corporate clients.</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Education & Certs -->
+   <section class="py-24 px-6 bg-slate-950/50">
+      <div class="container mx-auto grid md:grid-cols-2 gap-16">
+         <!-- Education -->
+         <div data-aos="fade-right">
+            <h2 class="text-2xl font-bold mb-8 mono uppercase tracking-tighter">Education</h2>
+            <div class="space-y-6">
+               <div class="p-5 border border-slate-800 rounded-lg bg-slate-900/50">
+                  <h4 class="font-bold text-white uppercase">Masters in Computer Science</h4>
+                  <p class="text-xs text-cyan-400 mono">Lincoln University College (2021-2024)</p>
+               </div>
+               <div class="p-5 border border-slate-800 rounded-lg bg-slate-900/50">
+                  <h4 class="font-bold text-white uppercase">BSc in Business Computing</h4>
+                  <p class="text-xs text-cyan-400 mono">University of Central Lancashire (2016-2019)</p>
+               </div>
+            </div>
+         </div>
+         <!-- Certs -->
+         <div data-aos="fade-left">
+            <h2 class="text-2xl font-bold mb-8 mono uppercase tracking-tighter">Certifications</h2>
+            <div class="grid grid-cols-1 gap-3">
+               <div class="flex items-center gap-3 p-4 border border-slate-800 rounded-lg bg-slate-900/50">
+                  <i class="fas fa-certificate text-cyan-400"></i>
+                  <span class="text-sm mono">Cisco Certified Network Associate (CCNA)</span>
+               </div>
+               <div class="flex items-center gap-3 p-4 border border-slate-800 rounded-lg bg-slate-900/50">
+                  <i class="fas fa-certificate text-cyan-400"></i>
+                  <span class="text-sm mono">RHEL 9 Administration Training</span>
+               </div>
+               <div class="flex items-center gap-3 p-4 border border-slate-800 rounded-lg bg-slate-900/50">
+                  <i class="fas fa-certificate text-cyan-400"></i>
+                  <span class="text-sm mono">AWS Training by Coursera</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Contact Section -->
+   <section id="contact" class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl text-center">
+         <div class="bg-slate-900 rounded-3xl p-12 border border-slate-800 glow mono shadow-2xl" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold mb-6">manishsah@ops:~$ <span class="gradient-text">hire_me</span></h2>
+            <p class="text-slate-400 mb-10 max-w-lg mx-auto">Currently open for Network Administration and
+               Infrastructure Engineering roles.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+               <div class="p-6 rounded-xl bg-slate-950/50 border border-slate-800">
+                  <p class="text-xs text-slate-500 uppercase font-bold mb-2">Direct Contact</p>
+                  <p class="text-xl font-bold">+977 9801105959</p>
+                  <p class="text-cyan-400 text-sm">manishsah934@gmail.com</p>
+               </div>
+               <div class="p-6 rounded-xl bg-slate-950/50 border border-slate-800">
+                  <p class="text-xs text-slate-500 uppercase font-bold mb-2">Network Profile</p>
+                  <p class="text-sm">Kathmandu, Nepal</p>
+                  <a href="https://www.linkedin.com/in/manish-shah-467560170/"
+                     class="text-cyan-400 text-sm hover:underline">LinkedIn ID:
+                     manish-shah-467560170/</a>
+               </div>
+            </div>
+
+            <a href="mailto:manishsah934@gmail.com"
+               class="inline-block bg-cyan-500 text-slate-950 px-12 py-5 rounded-full font-bold text-xl uppercase tracking-widest shadow-xl shadow-cyan-500/20 hover:scale-105 transition">
+               Send Transmission
+            </a>
+         </div>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="py-12 border-t border-slate-800 text-center text-slate-500">
+      <div class="container mx-auto px-6">
+         <p class="mono text-xs uppercase tracking-[0.4em]">© 2026 Manish Kumar Sah | Network Engineer |
+            Root_Access_GRANTED</p>
+      </div>
+   </footer>
+
+   <!-- AOS & Script -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+   <script>
+      AOS.init({ duration: 800, once: true });
+
+      // Moving Particles Theme (Network Mesh)
+      tsParticles.load("tsparticles", {
+         particles: {
+            number: { value: 60, density: { enable: true, value_area: 800 } },
+            color: { value: "#22d3ee" },
+            links: { enable: true, distance: 150, color: "#22d3ee", opacity: 0.2, width: 1 },
+            move: { enable: true, speed: 1.5, direction: "none", random: false, straight: false, out_mode: "out" },
+            size: { value: 2 },
+            opacity: { value: 0.3 }
+         }
+      });
+   </script>
+</body>
+
+</html>
